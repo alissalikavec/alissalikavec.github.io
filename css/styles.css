@@ -50,12 +50,12 @@ header nav {
       opacity: 1; }
   header nav ul {
     margin: 0;
-    text-align: right;
+    padding: 0;
+    display: flex;
     list-style: none;
-    position: relative; }
+    flex-flow: row wrap; }
     header nav ul li {
-      display: inline-block;
-      width: 10%; }
+      flex-grow: 1; }
 
 footer {
   margin: 0 2.78rem;
@@ -83,3 +83,21 @@ footer {
     display: block;
     animation: beamMeUp 2s infinite;
     transition: transform 1s linear; }
+
+@media (max-width: 425px) {
+  html {
+    font-size: 12px; }
+  .btn {
+    font-size: 2rem; }
+  header nav a {
+    font-size: 1.3rem; }
+  footer {
+    flex-flow: row wrap; }
+    footer svg {
+      width: 35px;
+      padding: 0 5px; }
+    footer ul {
+      flex: 100%; }
+      footer ul ~ div {
+        font-size: 1.2rem;
+        flex: 50%; } }

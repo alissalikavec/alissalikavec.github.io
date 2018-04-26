@@ -65,12 +65,13 @@ header nav {
   }
   ul {
     margin: 0;
-    text-align: right;
+    padding: 0;
+    display: flex;
     list-style: none;
-    position: relative;
+    flex-flow: row wrap;
     li {
-      display: inline-block;
-      width: 10%;
+      flex-grow: 1;
+
     }
   }
 }
@@ -109,3 +110,29 @@ footer {
     transition: transform 1s linear;
   }
 }
+
+@media (max-width: 425px){
+  html { font-size: 12px; }
+
+  .btn {
+    font-size: 2rem;
+  }
+  header nav a {
+    font-size: 1.3rem;
+  }
+  footer {
+    flex-flow: row wrap;
+    svg {
+      width: 35px;
+      padding: 0 5px;
+    }
+    ul {
+      flex: 100%;
+      & ~ div {
+        font-size: 1.2rem;
+        flex: 50%;
+      }
+    }
+
+    }
+  }

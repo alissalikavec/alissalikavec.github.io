@@ -8,5 +8,8 @@
     "scss": "node-sass --watch scss -o css"
   },
   "author": "Alissa Likavec",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
 }
