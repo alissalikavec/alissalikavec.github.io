@@ -1,7 +1,8 @@
-html {
-  font-size: 18px;
-  line-height: 30px;
-  overflow: scroll;
+// TODO: Fix job images when wide
+
+@keyframes dotsAnimation {
+  from { opacity: 0; }
+  to { opacity: 100%; }
 }
 
 %12-grid {
@@ -14,47 +15,12 @@ html {
   grid-column: 1 / 13;
 }
 
-%flex-columns {
-  display: flex;
-  flex-direction: column;
-  height: 180px;
-  flex-wrap: wrap;
-}
-
 body {
-  @extend %12-grid;
   background: linear-gradient(#9729B3, #0B0275);
-  color: white;
-  font-family: 'Ubuntu Mono', monospace;
-  font-weight: 400;
-  margin: 0;
 }
 
-
-h1, h2, h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
-}
-
-
-h1 {
-  line-height: 3.3rem; // 60px
-  font-size: 2.67rem; // 48px
-  text-align: center;
-  font-weight: 400;
-}
-
-h2 {
-  margin: 3.1rem 0 0 0; // 74px
-  line-height: 3.3rem; // 60px
-  font-size: 1.67rem // 30px;
-}
-
-header, main, footer {
-    grid-column: 1 / 13;
-}
-
-section:not(.projects){
-  margin: 4rem 2.78rem; // 50px
+section:not(#projects){
+  margin: 2rem 2.78rem; // 50px
   p {
     margin-top: 0;
   }
@@ -70,6 +36,42 @@ main > section {
    }
 }
 
+button, .btn {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 40px;
+  color: white;
+  background: #ff3f60;
+  border: 3px solid transparent;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  width: 4.5rem;
+  position: relative;
+  &:before {
+    content: " ";
+    position: absolute;
+    border-radius: 40px;
+    z-index: -1;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 3px solid #ff3f60;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background: #f7879a;
+    &:before {
+        border-color: #f7879a;
+    }
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
 header {
   margin: 0 2.78rem; // 50px  // grid-row: 1;
   // @extend %12-grid;
@@ -79,15 +81,7 @@ header {
   }
 
   nav {
-    ul {
-      text-align: right;
-      list-style: none;
-      position: relative;
-      li {
-        display: inline-block;
-        width: 10%;
-      }
-    }
+    background-color: transparent;
   }
 
   .circular-img {
@@ -107,7 +101,7 @@ header {
       fill: white;
       transition: all .25s cubic-bezier(0, 0.29, 1, 1.5);
       &:hover {
-        fill: #ffa2a2;
+        fill: #feffa9;
         transform: scale(1.1);
         cursor: pointer;
       }
@@ -115,7 +109,7 @@ header {
   }
 }
 
-.projects {
+#projects {
   grid-gap: 0px;
   grid-template-rows: repeat(5, 1fr);
   h2 {
@@ -152,6 +146,11 @@ header {
     	opacity: .6;
       z-index: -1;
     }
+    &:hover {
+        .bg-overlay {
+        background-image: linear-gradient(to bottom, #0046ff, #ff0087a3);
+      }
+    }
     .content {
       z-index: 1;
     }
@@ -163,33 +162,36 @@ header {
       grid-column: 7 / 13;
     }
     &.bloc {
-      background: url('../images/bloc-bg.png');
+      background: url('../assets/bloc-bg.png');
       grid-row: 2 / 4;
     }
     &.sportsrocket {
-      background: url('../images/sportsrocket-bg.png') center -100px;
+      background: url('../assets/sportsrocket-bg.png') center -100px;
       grid-row: 2 / 4;
     }
     &.autoloop {
-      background: url('../images/autoloop-bg.png') center;
+      background: url('../assets/autoloop-bg.png') center;
       grid-row: 4 / 6;
     }
     &.usf {
-      background: url('../images/usf-bg.png') left;
+      background: url('../assets/usf-bg.png') left;
       grid-row: 4 / 6;
     }
   }
 }
 
-.skills {
+#skills {
   .tools {
-    grid-column: 2 / 7;
+    grid-column: 3 / 7;
   }
   .technologies {
-    grid-column: 7 / 12;
+    grid-column: 7 / 11;
   }
   .tools ul.columns, .technologies ul.columns {
-    @extend %flex-columns;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 180px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -201,7 +203,8 @@ header {
 
     & + figure {
       grid-column: 9 / 13;
-      margin-top: 3rem;
+      margin: 3rem 0 0;
+      text-align: center;
       img {
         width: 20rem; // 360px;
       }
@@ -224,11 +227,25 @@ header {
   }
 }
 
-.chat {
+#chat {
   text-align: center;
   h2 { grid-column: 1 / 13; }
   .chat-items {
     grid-column: 1 / 7;
+    p {
+      span {
+        animation-name: dotsAnimation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+        &:nth-child(2){
+          animation-delay: .5s;
+        }
+        &:nth-child(3){
+          animation-delay: 1s;
+        }
+      }
+    }
     ul {
       list-style-type: none;
       padding: 0;
@@ -241,39 +258,25 @@ header {
       display: block;
       height: 2rem;
       margin: .5rem auto;
-      width: 75%;
-      font-family: 'Ubuntu Mono', monospace;
-      font-size: .9rem;
     }
     textarea {
+      margin: 0 auto;
+    }
+    input, textarea {
       font-family: 'Ubuntu Mono', monospace;
       font-size: .9rem;
       width: 75%;
-      margin: 0 auto;
+      padding: .25rem;
     }
   }
   .submit {
-    display: block;
-    margin: 0 auto;
-    background: transparent;
-    border-radius: 40px;
-    color: white;
-    border: 3px solid #ff3f60;
-    padding: .75rem 1rem;
     font-size: 1rem;
     width: 9.5rem;
   }
 }
 
 footer {
-  margin: 0 2.78rem; // 50px
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  ul li {
-    list-style-type: none;
-    display: inline-block;
-  }
-  svg {
-    width: 25px;
-    fill: white;
+  .beam-up a {
+    color: #ff3f60;
   }
 }
