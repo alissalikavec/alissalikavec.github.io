@@ -55,6 +55,16 @@ img.laptop {
       height: 30px;
       flex: 50%; }
 
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+  .flex.thirds img {
+    flex: 40%;
+    padding: 20px;
+    max-width: 400px;
+    align-self: center; }
+
 footer {
   border-color: #8e45ce; }
   footer svg {

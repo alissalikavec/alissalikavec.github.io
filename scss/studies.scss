@@ -79,6 +79,17 @@ img.laptop {
   }
 }
 
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  &.thirds img {
+    flex: 40%;
+    padding: 20px;
+    max-width: 400px;
+    align-self: center;
+  }
+}
 footer {
   border-color: #8e45ce;
 

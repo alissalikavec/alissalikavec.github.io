@@ -108,13 +108,13 @@ header {
       background: url("../assets/bloc-bg.png");
       grid-row: 1 / 3; }
     #projects > div.sportsrocket {
-      background: url("../assets/sportsrocket-bg.png") center -100px;
+      background: url("../assets/sportsrocket/sportsrocket-bg.png") center -100px;
       grid-row: 1 / 3; }
     #projects > div.autoloop {
-      background: url("../assets/autoloop-bg.png") center;
+      background: url("../assets/autoloop/autoloop-bg.png") center;
       grid-row: 3 / 5; }
     #projects > div.usf {
-      background: url("../assets/usf-bg.png") left;
+      background: url("../assets/health/usf-bg.png") left;
       grid-row: 3 / 5; }
 
 #skills {
@@ -127,14 +127,13 @@ header {
     grid-row: 1 / 3; }
   #skills .tools ul.columns, #skills .technologies ul.columns {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     height: 180px;
     list-style-type: none;
     padding: 0;
     margin: 0; }
   #skills .skills-about {
-    grid-column: 1 / 8;
+    grid-column: 2 / 9;
     margin-top: 3rem;
     grid-row: 3 / 6; }
     #skills .skills-about + figure {
@@ -142,14 +141,15 @@ header {
       margin: 3rem 0 0;
       text-align: center; }
       #skills .skills-about + figure img {
-        width: 20rem; }
+        width: 100%;
+        max-width: 300px; }
       #skills .skills-about + figure figcaption {
         font-size: 0.78rem;
         line-height: 1.167rem;
         margin-top: 0.4rem; }
 
 .endorsements > * {
-  grid-column: 1 / 13; }
+  grid-column: 2 / 12; }
 
 .endorsements .author {
   text-align: center; }
@@ -206,16 +206,14 @@ header {
 footer .beam-up a {
   color: #ff3f60; }
 
-@media (max-width: 425px) {
+@media (min-width: 0px) and (max-width: 765px) {
   #projects > div:nth-child(even), #projects > div:nth-child(odd) {
     grid-column: 1 / 13; }
   #projects > div.bloc {
     grid-row: 1 / 2; }
   #projects > div.sportsrocket {
-    background: url("../assets/sportsrocket-bg.png") center -100px;
     grid-row: 2 / 3; }
   #projects > div.autoloop {
-    background: url("../assets/autoloop-bg.png") center;
     grid-row: 3 / 4; }
   #projects > div.usf {
     background: url("../assets/usf-bg.png") left;
