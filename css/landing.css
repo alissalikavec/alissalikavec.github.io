@@ -144,8 +144,8 @@ header {
         width: 100%;
         max-width: 300px; }
       #skills .skills-about + figure figcaption {
-        font-size: 0.78rem;
-        line-height: 1.167rem;
+        font-size: 14px;
+        line-height: 28px;
         margin-top: 0.4rem; }
 
 .endorsements > * {

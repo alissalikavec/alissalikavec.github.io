@@ -18,15 +18,20 @@ header {
 main > section {
   line-height: 1.5rem;
   padding: 10px 11rem 20px; }
+  main > section img {
+    max-width: 100%; }
   main > section:nth-child(even) {
-    background: #f7f5ff; }
+    background: #ebeaef; }
 
 .header-flex {
   display: flex;
-  padding: 4rem 1rem; }
+  padding: 4rem 1rem;
+  flex-flow: row wrap;
+  justify-content: center; }
 
 img.laptop {
   max-width: 743px;
+  width: 50%;
   align-self: center; }
 
 .about {
@@ -75,3 +80,11 @@ footer {
     color: #8e45ce; }
     footer a:hover {
       color: #e546e6; }
+
+@media (min-width: 0px) and (max-width: 765px) {
+  main > section {
+    padding: 10px 25px; }
+  .about {
+    flex-basis: 100%; }
+    .about .company {
+      margin-top: 30px; } }

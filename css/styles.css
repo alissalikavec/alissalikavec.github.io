@@ -53,24 +53,26 @@ header nav {
     padding: 0;
     display: flex;
     list-style: none;
-    flex-flow: row wrap; }
+    justify-content: center; }
     header nav ul li {
-      flex-grow: 1; }
+      width: 20%; }
 
 footer {
   margin: 0 2.78rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex; }
+  display: flex;
+  padding: 10px 0; }
   footer ul {
     display: inline-block;
-    padding: 0; }
+    padding: 0;
+    margin: 0;
+    text-align: center; }
     footer ul li {
       list-style-type: none;
-      display: inline-block; }
+      display: inline-block;
+      width: 15%; }
     footer ul, footer ul ~ div {
-      flex: calc(100%/3);
-      text-align: center;
-      align-self: center; }
+      flex: calc(100%/3); }
   footer svg {
     width: 25px;
     fill: white; }
@@ -84,9 +86,11 @@ footer {
     animation: beamMeUp 2s infinite;
     transition: transform 1s linear; }
 
-@media (max-width: 425px) {
+@media (min-width: 0px) and (max-width: 765px) {
   html {
     font-size: 12px; }
+  p {
+    font-size: 1.3rem; }
   .btn {
     font-size: 2rem; }
   header nav a {
