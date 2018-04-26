@@ -31,26 +31,16 @@ button, .btn {
   color: white;
   background: #ff3f60;
   border: 3px solid transparent;
-  padding: .5rem 1rem;
+  padding: .1rem 1rem;
   font-size: .9rem;
   width: 4.5rem;
-  position: relative; }
-  button:before, .btn:before {
-    content: " ";
-    position: absolute;
-    border-radius: 40px;
-    z-index: -1;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 3px solid #ff3f60; }
+  position: relative;
+  transition: all 0.25s cubic-bezier(0, 0.29, 1, 1.5); }
   button:hover, .btn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    transform: scale(1.1); }
   button:active, .btn:active {
     background: #f7879a; }
-    button:active:before, .btn:active:before {
-      border-color: #f7879a; }
   button:focus, .btn:focus {
     outline: 0; }
 
@@ -172,9 +162,7 @@ header {
   #chat .chat-items {
     grid-column: 1 / 7; }
     #chat .chat-items p span {
-      animation-name: dotsAnimation;
-      animation-duration: 2s;
-      animation-iteration-count: infinite; }
+      animation: dotsAnimation 2s infinite; }
       #chat .chat-items p span:nth-child(2) {
         animation-delay: .5s; }
       #chat .chat-items p span:nth-child(3) {
@@ -198,7 +186,24 @@ header {
       padding: .25rem; }
   #chat .submit {
     font-size: 1rem;
-    width: 9.5rem; }
+    width: 9.5rem;
+    padding: .5rem 1rem; }
+    #chat .submit:before {
+      content: " ";
+      position: absolute;
+      border-radius: 40px;
+      z-index: -1;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 3px solid #ff3f60; }
+    #chat .submit:hover {
+      cursor: pointer; }
+    #chat .submit:active {
+      background: #f7879a; }
+      #chat .submit:active:before {
+        border-color: #f7879a; }
 
 footer .beam-up a {
   color: #ff3f60; }

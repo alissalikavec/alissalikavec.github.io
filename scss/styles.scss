@@ -1,3 +1,5 @@
+// TODO: replace nav with flexbox
+// TODO: build flexbox masonry grid
 %12-grid {
   display: grid;
   grid-column-gap: 20px;
@@ -6,6 +8,12 @@
 
 %full-width {
   grid-column: 1 / 13;
+}
+
+@keyframes beamMeUp {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px);}
 }
 
 h1, h2, h3 {
@@ -47,6 +55,14 @@ header, main, footer {
 
 header nav {
   // background: blue;
+  padding: .5rem 0;
+  a {
+    color: white;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
   ul {
     margin: 0;
     text-align: right;
@@ -85,5 +101,11 @@ footer {
       transform: scale(1.1);
       cursor: pointer;
     }
+  }
+  .beam-up a {
+    transform: translateY(5px);
+    display: block;
+    animation: beamMeUp 2s infinite;
+    transition: transform 1s linear;
   }
 }
