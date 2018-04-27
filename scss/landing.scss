@@ -1,6 +1,3 @@
-// TODO: Fix job images when wide
-// TODO: replace header with flexbox
-
 @keyframes dotsAnimation {
   from { opacity: 0; }
   to { opacity: 100%; }
@@ -27,46 +24,16 @@ section:not(#projects){
   }
 }
 
-h2, h3 { text-align: center; }
+h2, h3, h4 { text-align: center; }
 h2 {
   margin-bottom: 1.5rem;
  }
 
 main > section {
   @extend %12-grid;
-
-
-}
-
-button, .btn {
-  display: block;
-  margin: 1rem auto;
-  border-radius: 40px;
-  color: white;
-  background: #ff3f60;
-  border: 3px solid transparent;
-  padding: .1rem 1rem;
-  font-size: .9rem;
-  width: 40%;
-  position: relative;
-  transition: all .25s cubic-bezier(0, 0.29, 1, 1.5);
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-  &:active {
-    background: #f7879a;
-  }
-  &:focus {
-    outline: 0;
-  }
 }
 
 header {
-  margin: 0 2.78rem; // 50px  // grid-row: 1;
-  // @extend %12-grid;
-  text-align: center;
   h1 {
     margin: 5% 0;
   }
@@ -103,9 +70,6 @@ header {
 #projects {
   grid-gap: 0px;
   grid-template-rows: repeat(4, 1fr);
-  // h2 {
-  //   grid-row: 1 / 2;
-  // }
   h3 {
     font-family: 'Ubuntu Mono', monospace;
     font-size: 1.8rem;
@@ -145,11 +109,11 @@ header {
     .content {
       z-index: 1;
     }
-    &:nth-child(even){
+    &:nth-child(odd){
       grid-column: 1 / 7;
 
     }
-    &:nth-child(odd){
+    &:nth-child(even){
       grid-column: 7 / 13;
     }
     &.bloc {
@@ -174,7 +138,7 @@ header {
 #skills {
   grid-template-rows: repeat(5, auto);
   .tools {
-    grid-column: 3 / 7;
+    grid-column: 2 / 7;
     grid-row: 1 / 3;
   }
   .technologies {
@@ -309,10 +273,9 @@ footer {
         grid-row: 3 / 4;
       }
       &.usf {
-        background: url('../assets/usf-bg.png') left;
         grid-row: 4 / 5;
       }
-  }
+    }
   }
   #skills {
     grid-row-gap: 20px;
