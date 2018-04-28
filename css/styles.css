@@ -29,8 +29,7 @@ a {
   color: #ff3f60;
   cursor: pointer; }
   a:hover {
-    text-decoration: underline;
-    color: #ff3f6073; }
+    text-decoration: underline; }
 
 html {
   font-size: 18px;
@@ -57,14 +56,15 @@ button, .btn {
   color: white;
   background: #ff3f60;
   border: 3px solid transparent;
-  padding: .1rem 1rem;
   font-size: .9rem;
   width: 40%;
   position: relative;
   transition: all 0.25s cubic-bezier(0, 0.29, 1, 1.5); }
   button:hover, .btn:hover {
     cursor: pointer;
-    transform: scale(1.1); }
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none; }
   button:active, .btn:active {
     background: #f7879a; }
   button:focus, .btn:focus {

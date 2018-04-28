@@ -35,7 +35,6 @@ a {
   cursor: pointer;
   &:hover {
     text-decoration: underline;
-    color: #ff3f6073;
   }
 }
 html {
@@ -69,7 +68,6 @@ button, .btn {
   color: white;
   background: #ff3f60;
   border: 3px solid transparent;
-  padding: .1rem 1rem;
   font-size: .9rem;
   width: 40%;
   position: relative;
@@ -78,6 +76,8 @@ button, .btn {
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
+    color: white;
+    text-decoration: none;
   }
   &:active {
     background: #f7879a;
