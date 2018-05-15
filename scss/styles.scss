@@ -20,18 +20,23 @@ h1, h2, h3 {
 
 h1 {
   line-height: 3.3rem; // 60px
-  font-size: 2.67rem; // 48px
+  font-size: 2rem;
   text-align: center;
   font-weight: 400;
 }
 
 h2 {
-  line-height: 3.3rem; // 60px
-  font-size: 1.67rem // 30px;
+  line-height: 3rem;
+  font-size: 1.67rem;
 }
+
+h3 {
+  font-size: 1.5rem;
+}
+
 a {
   text-decoration: none;
-  color: #ff3f60;
+  color: #e24760;
   cursor: pointer;
   &:hover {
     text-decoration: underline;
@@ -101,16 +106,19 @@ header nav {
     padding: 0;
     display: flex;
     list-style: none;
+    flex-flow: row wrap;
     justify-content: center;
     li {
       align-self: center;
       flex: auto;
     }
+    li:first-child {
+      flex: 5;
+    }
   }
 }
 
 footer {
-  margin: 0 2.78rem; // 50px
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
@@ -134,7 +142,7 @@ footer {
     width: 25px;
     fill: white;
     &:hover {
-      fill: #feffa9;
+      fill: #ffb6c2;
       transform: scale(1.1);
       cursor: pointer;
     }
@@ -150,12 +158,19 @@ footer {
 @media (min-width: 0px) and (max-width: 765px){
   html { font-size: 12px; }
   h2 { font-size: 2rem; }
-  p, ul { font-size: 1.3rem; }
+  p, ul {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
   .btn {
     font-size: 1.2rem;
   }
   header nav a {
     font-size: 1.3rem;
+  }
+  header nav ul li,
+  header nav ul li:first-child {
+    flex: 100%;
   }
   footer {
     flex-flow: row wrap;

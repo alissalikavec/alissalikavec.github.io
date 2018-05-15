@@ -23,6 +23,14 @@ h2, h3, h4 {
 h2 {
   margin-bottom: 1.5rem; }
 
+h3 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.8rem;
+  margin: .5rem; }
+
+a {
+  color: #ffb6c2; }
+
 header h1 {
   margin: 5% 0; }
 
@@ -37,6 +45,9 @@ header .summary {
   font-size: 1.33rem;
   line-height: 2rem;
   text-align: center; }
+  header .summary aside {
+    font-size: 16px;
+    margin-top: 1rem; }
 
 header .socials {
   margin: 1.67rem auto; }
@@ -52,10 +63,6 @@ header .socials {
 #projects {
   grid-gap: 0px;
   grid-template-rows: repeat(4, 1fr); }
-  #projects h3 {
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 1.8rem;
-    margin: .5rem; }
   #projects .project-subhead {
     text-align: center;
     font-size: 1rem;
@@ -98,36 +105,31 @@ header .socials {
       background: url("../assets/health/usf-bg.png") left;
       grid-row: 3 / 5; }
 
+.what-i-do {
+  font-size: 2rem; }
+
 #skills {
   grid-template-rows: repeat(5, auto); }
   #skills .tools {
     grid-column: 2 / 7;
     grid-row: 1 / 3; }
   #skills .technologies {
-    grid-column: 7 / 11;
+    grid-column: 7 / 13;
     grid-row: 1 / 3; }
-  #skills .tools ul.columns, #skills .technologies ul.columns {
+  #skills strong {
+    margin-bottom: 20px;
+    display: inline-block; }
+  #skills ul.columns {
     display: flex;
     flex-flow: column wrap;
     height: 180px;
     list-style-type: none;
     padding: 0;
     margin: 0; }
-  #skills .skills-about {
-    grid-column: 2 / 9;
-    margin-top: 3rem;
-    grid-row: 3 / 6; }
-    #skills .skills-about + figure {
-      grid-column: 9 / 13;
-      margin: 3rem 0 0;
-      text-align: center; }
-      #skills .skills-about + figure img {
-        width: 100%;
-        max-width: 300px; }
-      #skills .skills-about + figure figcaption {
-        font-size: 14px;
-        line-height: 28px;
-        margin-top: 0.4rem; }
+  #skills .btn[href="about.html"] {
+    grid-column: 1 / 13;
+    grid-row: 3 / 6;
+    text-align: center; }
 
 .endorsements > * {
   grid-column: 2 / 12; }
@@ -184,10 +186,9 @@ header .socials {
       #chat .submit:active:before {
         border-color: #f7879a; }
 
-footer .beam-up a {
-  color: #ff3f60; }
-
 @media (min-width: 0px) and (max-width: 765px) {
+  #projects > div .project-subhead, #projects > div .project-about {
+    font-size: 1.5rem; }
   #projects > div:nth-child(even), #projects > div:nth-child(odd) {
     grid-column: 1 / 13; }
   #projects > div.bloc {
@@ -200,13 +201,17 @@ footer .beam-up a {
     grid-row: 4 / 5; }
   #skills {
     grid-row-gap: 20px; }
+    #skills ul.columns li {
+      flex: 25%; }
     #skills .tools, #skills .technologies, #skills .skills-about, #skills .skills-about + figure {
       font-size: 1.3rem;
       grid-column: 1 / 13; }
     #skills .tools {
-      grid-row: 1 / 2; }
+      grid-row: 1 / 2;
+      text-align: center; }
     #skills .technologies {
-      grid-row: 2 / 3; }
+      grid-row: 2 / 3;
+      text-align: center; }
     #skills .skills-about {
       grid-row: 3 / 4; }
     #skills .skills-about + figure {

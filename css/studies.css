@@ -2,16 +2,13 @@ body {
   color: black; }
 
 h1 {
-  line-height: 3.3rem;
-  font-size: 2.67rem;
   font-weight: 400;
   text-align: inherit; }
 
-h2 {
-  line-height: 3.3rem;
-  font-size: 1.67rem; }
+ul li {
+  padding: 10px 0; }
 
-header {
+header, footer {
   background: linear-gradient(to left, #9ea4ec, #bc55bd);
   color: white; }
 
@@ -20,15 +17,26 @@ main > section {
   padding: 10px 11rem 20px; }
   main > section img {
     max-width: 100%; }
+  main > section.project-info .tech ul {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0; }
+    main > section.project-info .tech ul li {
+      list-style-type: none;
+      padding: 5px 0;
+      flex: 25%; }
+  main > section.next-previous {
+    padding: 20px;
+    font-size: 18px; }
   main > section:nth-child(even) {
     background: #ebeaef; }
   main > section.minimal-padding {
     padding: 10px 50px 20px;
     text-align: center; }
   main > section.masonry-images {
-    margin: 0 auto;
-    line-height: 0;
     text-align: center;
+    line-height: 0;
     padding: 0; }
     main > section.masonry-images img {
       width: 75%; }
@@ -47,75 +55,46 @@ img.laptop {
 .assessment-pictures img {
   width: 40%; }
 
-.wistia-videos {
+.work-videos {
   text-align: center; }
-  .wistia-videos h2 {
+  .work-videos h2 {
     text-align: left; }
-  .wistia-videos p {
+  .work-videos p {
     display: inline-block;
     width: 560px; }
 
 .about {
   flex-basis: 40%;
-  padding-left: 2rem; }
-  .about .company {
-    font-size: 1rem;
-    line-height: 2rem; }
-    .about .company h1 {
-      margin-top: 0;
-      margin-bottom: 0; }
-    .about .company p {
-      font-family: 'Ubuntu Mono', monospace; }
-  .about .role h3 {
+  padding-left: 2rem;
+  transform: translateY(30%); }
+  .about .company h1 {
+    margin-top: 0;
     margin-bottom: 0; }
-  .about .tech h3 {
-    margin-bottom: 0; }
-  .about .tech ul {
-    margin: 0;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 0; }
-    .about .tech ul li {
-      list-style-type: none;
-      flex: 50%; }
+  .about .company p {
+    font-family: 'Ubuntu Mono', monospace; }
 
 .flex {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around; }
-  .flex.thirds img {
-    flex: 40%;
-    padding: 20px;
-    max-width: 400px;
-    align-self: center; }
-  .flex.next-previous a:first-child {
-    flex: auto; }
-
-footer {
-  border-color: #8e45ce; }
-  footer svg {
-    fill: #8e45ce; }
-    footer svg:hover {
-      fill: #e546e6; }
-  footer a {
-    color: #8e45ce; }
-    footer a:hover {
-      color: #e546e6; }
+  .flex.next-previous {
+    background: #e9e1ff; }
+    .flex.next-previous a:first-child {
+      flex: auto; }
 
 @media (min-width: 0px) and (max-width: 765px) {
   main > section {
     padding: 10px 25px; }
+    main > section.project-info .tech ul li {
+      flex: 50%; }
   .about {
-    flex-basis: 100%; }
-    .about .company {
-      margin-top: 30px; } }
-
-@media (min-width: 0px) and (max-width: 765px) {
+    flex-basis: 100%;
+    transform: translateY(30%); }
   .tech, .role {
     font-size: 16px; }
   .about {
     padding-left: 0; }
   img.laptop {
     width: 100%; }
-  .wistia-videos p {
+  .work-videos p {
     width: 75%; } }

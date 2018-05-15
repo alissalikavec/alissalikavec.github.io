@@ -9,10 +9,6 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
-%full-width {
-  grid-column: 1 / 13;
-}
-
 body {
   background: linear-gradient(#9729B3, #0B0275);
 }
@@ -25,8 +21,19 @@ section:not(#projects){
 }
 
 h2, h3, h4 { text-align: center; }
+
 h2 {
   margin-bottom: 1.5rem;
+ }
+
+ h3 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.8rem;
+  margin: .5rem;
+ }
+
+ a {
+  color: #ffb6c2;
  }
 
 main > section {
@@ -50,6 +57,10 @@ header {
     font-size: 1.33rem; // 24px
     line-height: 2rem;
     text-align: center;
+    aside {
+      font-size: 16px;
+      margin-top: 1rem;
+    }
   }
   .socials {
     margin: 1.67rem auto; // 30px
@@ -70,11 +81,7 @@ header {
 #projects {
   grid-gap: 0px;
   grid-template-rows: repeat(4, 1fr);
-  h3 {
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 1.8rem;
-    margin: .5rem;
-  }
+
   .project-subhead {
     text-align: center;
     font-size: 1rem;
@@ -134,7 +141,9 @@ header {
     }
   }
 }
-
+.what-i-do {
+  font-size: 2rem;
+}
 #skills {
   grid-template-rows: repeat(5, auto);
   .tools {
@@ -142,10 +151,15 @@ header {
     grid-row: 1 / 3;
   }
   .technologies {
-    grid-column: 7 / 11;
+    grid-column: 7 / 13;
     grid-row: 1 / 3;
   }
-  .tools ul.columns, .technologies ul.columns {
+  strong {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  ul.columns {
     display: flex;
     flex-flow: column wrap;
     height: 180px;
@@ -154,25 +168,11 @@ header {
     margin: 0;
 
   }
-  .skills-about {
-    grid-column: 2 / 9;
-    margin-top: 3rem;
-    grid-row: 3 / 6;
 
-    & + figure {
-      grid-column: 9 / 13;
-      margin: 3rem 0 0;
-      text-align: center;
-      img {
-        width: 100%;
-        max-width: 300px;
-      }
-      figcaption {
-        font-size: 14px;
-        line-height: 28px;
-        margin-top: 0.4rem; // 8px
-      }
-    }
+  .btn[href="about.html"] {
+    grid-column: 1 / 13;
+    grid-row: 3 / 6;
+    text-align: center;
   }
 }
 
@@ -251,15 +251,12 @@ header {
   }
 }
 
-footer {
-  .beam-up a {
-    color: #ff3f60;
-  }
-}
-
 @media (min-width: 0px) and (max-width: 765px){
-  #projects{
-    & > div{
+  #projects {
+    & > div {
+      .project-subhead, .project-about {
+        font-size: 1.5rem;
+      }
       &:nth-child(even), &:nth-child(odd){
         grid-column: 1 / 13;
       }
@@ -279,15 +276,20 @@ footer {
   }
   #skills {
     grid-row-gap: 20px;
+    ul.columns li {
+      flex: 25%;
+    }
     .tools, .technologies, .skills-about, .skills-about + figure {
       font-size: 1.3rem;
       grid-column: 1 / 13;
     }
     .tools {
       grid-row: 1 / 2;
+      text-align: center;
     }
     .technologies {
       grid-row: 2 / 3;
+      text-align: center;
     }
     .skills-about {
       grid-row: 3 / 4;
