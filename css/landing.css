@@ -1,220 +1,301 @@
 @keyframes dotsAnimation {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 100%; } }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
 
 main > section {
-  display: grid;
-  grid-column-gap: 20px;
-  grid-template-columns: repeat(12, 1fr); }
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+}
 
 body {
-  background: linear-gradient(#9729B3, #0B0275); }
+    background: linear-gradient(#6c2a2a, #0b0275);
+}
 
 section:not(#projects) {
-  margin: 2rem 2.78rem; }
-  section:not(#projects) p {
-    margin-top: 0; }
+    margin: 2rem 2.78rem;
+}
+section:not(#projects) p {
+    margin-top: 0;
+}
 
-h2, h3, h4 {
-  text-align: center; }
+h2,
+h3,
+h4 {
+    text-align: center;
+}
 
 h2 {
-  margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+}
 
 h3 {
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 1.8rem;
-  margin: .5rem; }
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.8rem;
+    margin: 0.5rem;
+}
 
 a {
-  color: #ffb6c2; }
+    color: #ffb6c2;
+}
 
 header h1 {
-  margin: 5% 0; }
+    margin: 5% 0;
+}
 
 header nav {
-  background-color: transparent; }
+    background-color: transparent;
+}
 
 header .circular-img {
-  max-width: 205px;
-  margin: 0 auto; }
+    max-width: 205px;
+    margin: 0 auto;
+}
 
 header .summary {
-  font-size: 1.33rem;
-  line-height: 2rem;
-  text-align: center; }
-  header .summary aside {
+    font-size: 1.33rem;
+    line-height: 2rem;
+    text-align: center;
+}
+header .summary aside {
     font-size: 16px;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+}
 
 header .socials {
-  margin: 1.67rem auto; }
-  header .socials svg {
+    margin: 1.67rem auto;
+}
+header .socials svg {
     width: 2.22rem;
     fill: white;
-    transition: all 0.25s cubic-bezier(0, 0.29, 1, 1.5); }
-    header .socials svg:hover {
-      fill: #feffa9;
-      transform: scale(1.1);
-      cursor: pointer; }
+    transition: all 0.25s cubic-bezier(0, 0.29, 1, 1.5);
+}
+header .socials svg:hover {
+    fill: #feffa9;
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 #projects {
-  grid-gap: 0px;
-  grid-template-rows: repeat(4, 1fr); }
-  #projects .project-subhead {
+    grid-gap: 0px;
+    grid-template-rows: repeat(4, 1fr);
+}
+#projects .project-subhead {
     text-align: center;
     font-size: 1rem;
-    margin-bottom: 1rem; }
-  #projects .project-about {
+    margin-bottom: 1rem;
+}
+#projects .project-about {
     font-size: 1.15rem;
-    line-height: 1.7rem; }
-  #projects > div {
+    line-height: 1.7rem;
+}
+#projects > div {
     padding: 1rem;
     text-align: center;
     position: relative;
-    z-index: 0; }
-    #projects > div .bg-overlay {
-      position: absolute;
-      top: -1px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient(to bottom right, #0043ff, #c700697d);
-      opacity: .6;
-      z-index: -1; }
-    #projects > div:hover .bg-overlay {
-      background-image: linear-gradient(to bottom, #0046ff, #ff0087a3); }
-    #projects > div .content {
-      z-index: 1; }
-    #projects > div:nth-child(odd) {
-      grid-column: 1 / 7; }
-    #projects > div:nth-child(even) {
-      grid-column: 7 / 13; }
-    #projects > div.bloc {
-      background: url("../assets/bloc-bg.png");
-      grid-row: 1 / 3; }
-    #projects > div.sportsrocket {
-      background: url("../assets/sportsrocket/sportsrocket-bg.png") center -100px;
-      grid-row: 1 / 3; }
-    #projects > div.autoloop {
-      background: url("../assets/autoloop/autoloop-bg.png") center;
-      grid-row: 3 / 5; }
-    #projects > div.usf {
-      background: url("../assets/health/usf-bg.png") left;
-      grid-row: 3 / 5; }
+    z-index: 0;
+}
+#projects > div .bg-overlay {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #0043ff, #c700697d);
+    opacity: 0.6;
+    z-index: -1;
+}
+#projects > div:hover .bg-overlay {
+    background-image: linear-gradient(to bottom, #0046ff, #ff0087a3);
+}
+#projects > div .content {
+    z-index: 1;
+}
+#projects > div:nth-child(odd) {
+    grid-column: 1 / 7;
+}
+#projects > div:nth-child(even) {
+    grid-column: 7 / 13;
+}
+#projects > div.bloc {
+    background: url('../assets/bloc-bg.png');
+    grid-row: 1 / 3;
+}
+#projects > div.sportsrocket {
+    background: url('../assets/sportsrocket/sportsrocket-bg.png') center -100px;
+    grid-row: 1 / 3;
+}
+#projects > div.autoloop {
+    background: url('../assets/autoloop/autoloop-bg.png') center;
+    grid-row: 3 / 5;
+}
+#projects > div.usf {
+    background: url('../assets/health/usf-bg.png') left;
+    grid-row: 3 / 5;
+}
 
 .what-i-do {
-  font-size: 2rem; }
+    font-size: 2rem;
+}
 
 #skills {
-  grid-template-rows: repeat(5, auto); }
-  #skills .tools {
+    grid-template-rows: repeat(5, auto);
+}
+#skills .tools {
     grid-column: 2 / 7;
-    grid-row: 1 / 3; }
-  #skills .technologies {
+    grid-row: 1 / 3;
+}
+#skills .technologies {
     grid-column: 7 / 13;
-    grid-row: 1 / 3; }
-  #skills strong {
+    grid-row: 1 / 3;
+}
+#skills strong {
     margin-bottom: 20px;
-    display: inline-block; }
-  #skills ul.columns {
+    display: inline-block;
+}
+#skills ul.columns {
     display: flex;
     flex-flow: column wrap;
     height: 180px;
     list-style-type: none;
     padding: 0;
-    margin: 0; }
-  #skills .btn[href="about.html"] {
+    margin: 0;
+}
+#skills .btn[href='about.html'] {
     grid-column: 1 / 13;
     grid-row: 3 / 6;
-    text-align: center; }
+    text-align: center;
+}
 
 .endorsements > * {
-  grid-column: 2 / 12; }
+    grid-column: 2 / 12;
+}
 
 .endorsements .author {
-  text-align: center; }
+    text-align: center;
+}
 
 #chat {
-  text-align: center; }
-  #chat h2 {
-    grid-column: 1 / 13; }
-  #chat .chat-items {
-    grid-column: 1 / 7; }
-    #chat .chat-items p span {
-      animation: dotsAnimation 2s infinite; }
-      #chat .chat-items p span:nth-child(2) {
-        animation-delay: .5s; }
-      #chat .chat-items p span:nth-child(3) {
-        animation-delay: 1s; }
-    #chat .chat-items ul {
-      list-style-type: none;
-      padding: 0; }
-  #chat form {
+    text-align: center;
+}
+#chat h2 {
+    grid-column: 1 / 13;
+}
+#chat .chat-items {
+    grid-column: 1 / -1;
+}
+#chat .chat-items p span {
+    animation: dotsAnimation 2s infinite;
+}
+#chat .chat-items p span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+#chat .chat-items p span:nth-child(3) {
+    animation-delay: 1s;
+}
+#chat .chat-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+#chat form {
     grid-column: 7 / 13;
-    text-align: center; }
-    #chat form input {
-      display: block;
-      height: 2rem;
-      margin: .5rem auto; }
-    #chat form textarea {
-      margin: 0 auto; }
-    #chat form input, #chat form textarea {
-      font-family: 'Ubuntu Mono', monospace;
-      font-size: .9rem;
-      width: 75%;
-      padding: .25rem; }
-  #chat .submit {
+    text-align: center;
+}
+#chat form input {
+    display: block;
+    height: 2rem;
+    margin: 0.5rem auto;
+}
+#chat form textarea {
+    margin: 0 auto;
+}
+#chat form input,
+#chat form textarea {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    width: 75%;
+    padding: 0.25rem;
+}
+#chat .submit {
     font-size: 1rem;
-    padding: .5rem 1rem; }
-    #chat .submit:before {
-      content: " ";
-      position: absolute;
-      border-radius: 40px;
-      z-index: -1;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      border: 3px solid #ff3f60; }
-    #chat .submit:hover {
-      cursor: pointer; }
-    #chat .submit:active {
-      background: #f7879a; }
-      #chat .submit:active:before {
-        border-color: #f7879a; }
+    padding: 0.5rem 1rem;
+}
+#chat .submit:before {
+    content: ' ';
+    position: absolute;
+    border-radius: 40px;
+    z-index: -1;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 3px solid #ff3f60;
+}
+#chat .submit:hover {
+    cursor: pointer;
+}
+#chat .submit:active {
+    background: #f7879a;
+}
+#chat .submit:active:before {
+    border-color: #f7879a;
+}
 
 @media (min-width: 0px) and (max-width: 765px) {
-  #projects > div .project-subhead, #projects > div .project-about {
-    font-size: 1.5rem; }
-  #projects > div:nth-child(even), #projects > div:nth-child(odd) {
-    grid-column: 1 / 13; }
-  #projects > div.bloc {
-    grid-row: 1 / 2; }
-  #projects > div.sportsrocket {
-    grid-row: 2 / 3; }
-  #projects > div.autoloop {
-    grid-row: 3 / 4; }
-  #projects > div.usf {
-    grid-row: 4 / 5; }
-  #skills {
-    grid-row-gap: 20px; }
+    #projects > div .project-subhead,
+    #projects > div .project-about {
+        font-size: 1.5rem;
+    }
+    #projects > div:nth-child(even),
+    #projects > div:nth-child(odd) {
+        grid-column: 1 / 13;
+    }
+    #projects > div.bloc {
+        grid-row: 1 / 2;
+    }
+    #projects > div.sportsrocket {
+        grid-row: 2 / 3;
+    }
+    #projects > div.autoloop {
+        grid-row: 3 / 4;
+    }
+    #projects > div.usf {
+        grid-row: 4 / 5;
+    }
+    #skills {
+        grid-row-gap: 20px;
+    }
     #skills ul.columns li {
-      flex: 25%; }
-    #skills .tools, #skills .technologies, #skills .skills-about, #skills .skills-about + figure {
-      font-size: 1.3rem;
-      grid-column: 1 / 13; }
-    #skills .tools {
-      grid-row: 1 / 2;
-      text-align: center; }
-    #skills .technologies {
-      grid-row: 2 / 3;
-      text-align: center; }
-    #skills .skills-about {
-      grid-row: 3 / 4; }
+        flex: 25%;
+    }
+    #skills .tools,
+    #skills .technologies,
+    #skills .skills-about,
     #skills .skills-about + figure {
-      grid-row: 4 / 5; }
-  #chat .chat-items, #chat form {
-    grid-column: 1 / 13; } }
+        font-size: 1.3rem;
+        grid-column: 1 / 13;
+    }
+    #skills .tools {
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+    #skills .technologies {
+        grid-row: 2 / 3;
+        text-align: center;
+    }
+    #skills .skills-about {
+        grid-row: 3 / 4;
+    }
+    #skills .skills-about + figure {
+        grid-row: 4 / 5;
+    }
+    #chat .chat-items,
+    #chat form {
+        grid-column: 1 / 13;
+    }
+}

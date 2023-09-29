@@ -2,8 +2,9 @@ body {
   color: black;
 }
 
-header, footer {
-  background: linear-gradient(to left,#9ea4ec, #bc55bd);
+header,
+footer {
+  background: linear-gradient(to left, #0d0e1d, #bc55bd);
   color: white;
 }
 
@@ -41,12 +42,12 @@ main > section {
   }
 }
 
-
-@media (min-width: 0px) and (max-width: 765px){
+@media (min-width: 0px) and (max-width: 765px) {
   main > section {
     padding: 10px 25px;
   }
-  .about, .about + figure {
+  .about,
+  .about + figure {
     flex: 100%;
   }
 

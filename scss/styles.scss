@@ -1,190 +1,205 @@
 %12-grid {
-  display: grid;
-  grid-column-gap: 20px;
-  grid-template-columns: repeat(12, 1fr);
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 %full-width {
-  grid-column: 1 / 13;
+    grid-column: 1 / 13;
 }
 
 @keyframes beamMeUp {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0px);}
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-h1, h2, h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
+h1,
+h2,
+h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 h1 {
-  line-height: 3.3rem; // 60px
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 400;
+    line-height: 3.3rem; // 60px
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
 }
 
 h2 {
-  line-height: 3rem;
-  font-size: 1.67rem;
+    line-height: 3rem;
+    font-size: 1.67rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 a {
-  text-decoration: none;
-  color: #e24760;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
+    text-decoration: none;
+    color: #e24760;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 html {
-  font-size: 18px;
-  line-height: 30px;
-  overflow: scroll;
+    font-size: 18px;
+    line-height: 30px;
+    overflow: scroll;
 }
-
 
 body {
-  @extend %12-grid;
-  color: white;
-  font-family: 'Ubuntu Mono', monospace;
-  font-weight: 400;
-  margin: 0;
+    @extend %12-grid;
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 400;
+    margin: 0;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     grid-column: 1 / 13;
 }
 
 header {
-  padding: 0 2.78rem; // 50px  // grid-row: 1;
-  text-align: center;
+    padding: 0 2.78rem; // 50px  // grid-row: 1;
+    text-align: center;
 }
 
-button, .btn {
-  display: block;
-  margin: 1rem auto;
-  border-radius: 40px;
-  color: white;
-  background: #ff3f60;
-  border: 3px solid transparent;
-  font-size: .9rem;
-  width: 40%;
-  position: relative;
-  transition: all .25s cubic-bezier(0, 0.29, 1, 1.5);
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+button,
+.btn {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 40px;
     color: white;
-    text-decoration: none;
-  }
-  &:active {
-    background: #f7879a;
-  }
-  &:focus {
-    outline: 0;
-  }
+    background: #b14e08;
+    border: 3px solid transparent;
+    font-size: 0.9rem;
+    width: 40%;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0, 0.29, 1, 1.5);
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        color: white;
+        text-decoration: none;
+    }
+    &:active {
+        background: #f7879a;
+    }
+    &:focus {
+        outline: 0;
+    }
 }
 
 header nav {
-  padding: .5rem 0;
-  a {
-    color: white;
-    opacity: .7;
-    &:hover {
-      opacity: 1;
+    padding: 0.5rem 0;
+    a {
+        color: white;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+        }
     }
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    flex-flow: row wrap;
-    justify-content: center;
-    li {
-      align-self: center;
-      flex: auto;
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        flex-flow: row wrap;
+        justify-content: center;
+        li {
+            align-self: center;
+            flex: auto;
+        }
+        li:first-child {
+            flex: 5;
+        }
     }
-    li:first-child {
-      flex: 5;
-    }
-  }
 }
 
 footer {
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  padding: 10px 0;
-  ul {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
     text-align: center;
-      li {
-        list-style-type: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    padding: 10px 0;
+    ul {
         display: inline-block;
-        width: 15%;
-      }
-      &, & ~ div {
-        flex: calc(100%/3);
-      }
-
-  }
-  svg {
-    width: 25px;
-    fill: white;
-    &:hover {
-      fill: #ffb6c2;
-      transform: scale(1.1);
-      cursor: pointer;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            width: 15%;
+        }
+        &,
+        & ~ div {
+            flex: calc(100% / 3);
+        }
     }
-  }
-  .beam-up a {
-    transform: translateY(5px);
-    display: block;
-    animation: beamMeUp 2s infinite;
-    transition: transform 1s linear;
-  }
+    svg {
+        width: 25px;
+        fill: white;
+        &:hover {
+            fill: #ffb6c2;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+    .beam-up a {
+        transform: translateY(5px);
+        display: block;
+        animation: beamMeUp 2s infinite;
+        transition: transform 1s linear;
+    }
 }
 
-@media (min-width: 0px) and (max-width: 765px){
-  html { font-size: 12px; }
-  h2 { font-size: 2rem; }
-  p, ul {
-    font-size: 1.3rem;
-    line-height: 2rem;
-  }
-  .btn {
-    font-size: 1.2rem;
-  }
-  header nav a {
-    font-size: 1.3rem;
-  }
-  header nav ul li,
-  header nav ul li:first-child {
-    flex: 100%;
-  }
-  footer {
-    flex-flow: row wrap;
-    svg {
-      width: 35px;
-      padding: 0 5px;
+@media (min-width: 0px) and (max-width: 765px) {
+    html {
+        font-size: 12px;
     }
+    h2 {
+        font-size: 2rem;
+    }
+    p,
     ul {
-      flex: 100%;
-      & ~ div {
-        text-align: center;
-        font-size: 1.2rem;
-        flex: auto;
-      }
+        font-size: 1.3rem;
+        line-height: 2rem;
     }
-  }
+    .btn {
+        font-size: 1.2rem;
+    }
+    header nav a {
+        font-size: 1.3rem;
+    }
+    header nav ul li,
+    header nav ul li:first-child {
+        flex: 100%;
+    }
+    footer {
+        flex-flow: row wrap;
+        svg {
+            width: 35px;
+            padding: 0 5px;
+        }
+        ul {
+            flex: 100%;
+            & ~ div {
+                text-align: center;
+                font-size: 1.2rem;
+                flex: auto;
+            }
+        }
+    }
 }

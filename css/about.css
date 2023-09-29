@@ -1,39 +1,53 @@
 body {
-  color: black; }
+  color: black;
+}
 
-header, footer {
-  background: linear-gradient(to left, #9ea4ec, #bc55bd);
-  color: white; }
+header,
+footer {
+  background: linear-gradient(to left, #7a3e99, #2d2a54);
+  color: white;
+}
 
 main > section {
   line-height: 1.5rem;
-  padding: 10px 6rem; }
+  padding: 10px 6rem;
+}
 
 .flex {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .about {
   margin-top: 3rem;
   flex: 50%;
-  padding-right: 40px; }
-  .about + figure {
-    flex: 30%;
-    margin: 15% 0 0;
-    text-align: center; }
-    .about + figure img {
-      width: 100%;
-      max-width: 300px; }
-    .about + figure figcaption {
-      font-size: 14px;
-      line-height: 28px;
-      margin-top: 0.4rem; }
+  padding-right: 40px;
+}
+.about + figure {
+  flex: 30%;
+  margin: 15% 0 0;
+  text-align: center;
+}
+.about + figure img {
+  width: 100%;
+  max-width: 300px;
+}
+.about + figure figcaption {
+  font-size: 14px;
+  line-height: 28px;
+  margin-top: 0.4rem;
+}
 
 @media (min-width: 0px) and (max-width: 765px) {
   main > section {
-    padding: 10px 25px; }
-  .about, .about + figure {
-    flex: 100%; }
+    padding: 10px 25px;
+  }
+  .about,
   .about + figure {
-    margin-top: 20px; } }
+    flex: 100%;
+  }
+  .about + figure {
+    margin-top: 20px;
+  }
+}
