@@ -20,6 +20,9 @@
     }
 }
 
+$purple: #9e3ad1;
+$text: #100d0d;
+
 h1,
 h2,
 h3 {
@@ -44,7 +47,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: #e24760;
+    color: $purple;
     cursor: pointer;
     &:hover {
         text-decoration: underline;
@@ -58,7 +61,7 @@ html {
 
 body {
     @extend %12-grid;
-    color: white;
+    color: $text;
     font-family: 'Ubuntu Mono', monospace;
     font-weight: 400;
     margin: 0;
@@ -80,9 +83,8 @@ button,
     display: block;
     margin: 1rem auto;
     border-radius: 40px;
-    color: white;
-    background: #b14e08;
-    border: 3px solid transparent;
+    color: $text;
+    border: 1px solid $purple;
     font-size: 0.9rem;
     width: 40%;
     position: relative;
@@ -93,9 +95,6 @@ button,
         transform: scale(1.1);
         color: white;
         text-decoration: none;
-    }
-    &:active {
-        background: #f7879a;
     }
     &:focus {
         outline: 0;
@@ -123,7 +122,7 @@ header nav {
             flex: auto;
         }
         li:first-child {
-            flex: 5;
+            flex: 1;
         }
     }
 }
